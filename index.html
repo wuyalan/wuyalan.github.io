@@ -156,7 +156,7 @@ Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt
 </code></pre><p>然后系统会要求设置一个密码：</p>
 <pre><code>Enter passphrase (empty for no passphrase):&lt;设置密码&gt;
 Enter same passphrase again:&lt;再次输入密码&gt;
-</code></pre><p>以后通过 Github 上传文件到 Repository 时会用到这个密码；如果不填密码就直接回车的话，以后上传时业就不会有密码验证啦。当然这个设置是防止别人往你自己的 Repository 里提交内容哒。<br>【提示】输入密码的时候什么都不会显示！不要以为没输进去，输入完直接回车就可以了。<br>最后看到这样的界面，就表示已经成功设置好了 SSH key：</p>
+</code></pre><p>以后通过 Github 上传文件到 Repository 时会用到这个密码；如果不填密码就直接回车的话，以后上传时也就不会有密码验证啦。当然这个设置是防止别人往你自己的 Repository 里提交内容哒。<br>【提示】输入密码的时候什么都不会显示！不要以为没输进去，输入完直接回车就可以了。<br>最后看到这样的界面，就表示已经成功设置好了 SSH key：</p>
 <p><img src="http://beiyuu.com/images/githubpages/ssh-key-set.png" alt="已成功设置ssh key" title="已成功设置ssh key"></p>
 <h3 id="添加SSH-Key到GitHub"><a href="#添加SSH-Key到GitHub" class="headerlink" title="添加SSH Key到GitHub"></a>添加SSH Key到GitHub</h3><p>在本机设置 SSH Key 之后，需要添加到 GitHub 上，以完成 SSH 链接的设置。</p>
 <p>1、在我的电脑打开 C:\Users\Administrator.ssh 文件夹，找到 id_rsa.pub 文件，这里面就是刚才生成的密钥。用记事本打开，全选并复制。如果看不到这个文件，就需要通过下图的步奏来设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</p>
