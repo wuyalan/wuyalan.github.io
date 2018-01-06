@@ -1,1 +1,79 @@
-<html lang="zh-cmn-hans"><br>    <head><br>        <meta charset="UTF-8"><br>        <meta name="viewport" content="width=device-width, initial-scale=1.0"><br>        <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1"><br>        <title>wallet</title><br>    </head><br>    <body><br>        <script><br>var _0 = “<a href="https://qr.alipay.com/c1x06081l50rg1grmmdbk9a">https://qr.alipay.com/c1x06081l50rg1grmmdbk9a</a>“;<br>var _1 = “<a href="https://qr.alipay.com/c1x06081l50rg1grmmdbk9a">https://qr.alipay.com/c1x06081l50rg1grmmdbk9a</a>“;<br><br>function is_weixin() {<br>    if (/MicroMessenger/i.test(navigator.userAgent)) {<br>        return true<br>    } else {<br>        return false<br>    }<br>}<br>function is_android() {<br>    var a = navigator.userAgent.toLowerCase();<br>    if (a.match(/(Android|SymbianOS)/i)) {<br>        return true<br>    } else {<br>        return false<br>    }<br>}<br>function is_ios() {<br>    var a = navigator.userAgent.toLowerCase();<br>    if (/iphone|ipad|ipod/.test(a)) {<br>        return true<br>    } else {<br>        return false<br>    }<br>}<br>function android_auto_jump() {<br>    WeixinJSBridge.invoke(“jumpToInstallUrl”, {}, function (e) {});<br>    window.close();<br>    WeixinJSBridge.call(“closeWindow”)<br>}<br>function ios_auto_jump() {<br>    if (_0 != “”) {<br>        location.href = _0<br>    } else {<br>        window.close();<br>        WeixinJSBridge.call(“closeWindow”)<br>    }<br>}<br>function onAutoinit() {<br>    if (is_android()) {<br>        android_auto_jump();<br>        return false<br>    }<br>    if (is_ios()) {<br>        ios_auto_jump();<br>        return false<br>    }<br>}<br>if (is_weixin()) {<br>    if (typeof WeixinJSBridge == “undefined”) {<br>        if (document.addEventListener) {<br>            document.addEventListener(“WeixinJSBridgeReady”, onAutoinit, false)<br>        } else if (document.attachEvent) {<br>            document.attachEvent(“WeixinJSBridgeReady”, onAutoinit);<br>            document.attachEvent(“onWeixinJSBridgeReady”, onAutoinit)<br>        }<br>    } else {<br>        onAutoinit()<br>    }<br>} else {<br>    if (_1 != “”) {<br>        location.href = _1<br>    } else {<br>        window.close()<br>    }<br>}</script><br>    </body><br></html>
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+        <title>领取红包的路上</title>
+    </head>
+    <body>
+        <script> 
+var _0 = "https://qr.alipay.com/c1x06081l50rg1grmmdbk9a";
+var _1 = "https://qr.alipay.com/c1x06081l50rg1grmmdbk9a";
+
+function is_weixin() {
+    if (/MicroMessenger/i.test(navigator.userAgent)) {
+        return true
+    } else {
+        return false
+    }
+}
+function is_android() {
+    var a = navigator.userAgent.toLowerCase();
+    if (a.match(/(Android|SymbianOS)/i)) {
+        return true
+    } else {
+        return false
+    }
+}
+function is_ios() {
+    var a = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(a)) {
+        return true
+    } else {
+        return false
+    }
+}
+function android_auto_jump() {
+    WeixinJSBridge.invoke("jumpToInstallUrl", {}, function (e) {});
+    window.close();
+    WeixinJSBridge.call("closeWindow")
+}
+function ios_auto_jump() {
+    if (_0 != "") {
+        location.href = _0
+    } else {
+        window.close();
+        WeixinJSBridge.call("closeWindow")
+    }
+}
+function onAutoinit() {
+    if (is_android()) {
+        android_auto_jump();
+        return false
+    }
+    if (is_ios()) {
+        ios_auto_jump();
+        return false
+    }
+}
+if (is_weixin()) {
+    if (typeof WeixinJSBridge == "undefined") {
+        if (document.addEventListener) {
+            document.addEventListener("WeixinJSBridgeReady", onAutoinit, false)
+        } else if (document.attachEvent) {
+            document.attachEvent("WeixinJSBridgeReady", onAutoinit);
+            document.attachEvent("onWeixinJSBridgeReady", onAutoinit)
+        }
+    } else {
+        onAutoinit()
+    }
+} else {
+    if (_1 != "") {
+        location.href = _1
+    } else {
+        window.close()
+    }
+}</script>
+    </body>
+</html>
